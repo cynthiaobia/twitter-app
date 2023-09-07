@@ -42,7 +42,7 @@ app.get('/tweets', async (req, res) => {
   try {
     const tweets = await Tweet.find({likes: {$gte: 3, $lte: 20}});
     // res.send(tweets);
-    res.render('Index', {tweets});
+    res.render('index', {tweets});
   } catch (e) {
     console.log(e);
   }
